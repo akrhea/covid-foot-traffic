@@ -12,16 +12,12 @@ def naics_employment(week,zipp,naics,feature_output):
     Return:
         naics_columns: 1x5 dataframe with the establishment count by 2,3,4,5, and 6-digit naics codes as columns
         '''
-    if len(str(week))==1:
-        week_str = '0'+str(week)
-    else:
-        week_str = str(week)
-    naics_2 = 'num_biz_'+str(naics[:2])+'----'
-    naics_3 = 'num_biz_'+str(naics[:3])
-    naics_4 = 'num_biz_'+str(naics[:4])
-    naics_5 = 'num_biz_'+str(naics[:5])
-    naics_6 = 'num_biz_'+str(naics[:6])
-    naics_columns = feature_output[(feature_output['week']==week_str)&(feature_output['ZIP']==int(zipp))] \
+    naics_2 = 'num_biz_'+str(naics)[:2]+'----'
+    naics_3 = 'num_biz_'+str(naics)[:3]
+    naics_4 = 'num_biz_'+str(naics)[:4]
+    naics_5 = 'num_biz_'+str(naics)[:5]
+    naics_6 = 'num_biz_'+str(naics)[:6]
+    naics_columns = feature_output[(feature_output['week']==week)&(feature_output['ZIP']==int(zipp))] \
     [[naics_2,naics_3,naics_4,naics_5,naics_6]]
     naics_columns.rename(columns={naics_2: "naics_2_num_biz",
                                   naics_3: "naics_3_num_biz",
