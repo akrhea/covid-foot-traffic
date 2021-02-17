@@ -1,4 +1,4 @@
-# Predicting Year-over-Year Change in Foot Traffic due to COVID-19
+# Predicting Year-over-Year Change in Foot Traffic during to COVID-19
 
 ### Tamar Novetsky, Alene Rhea, and Michael Stanley<br/>NYU Center for Data Science, Machine Learning, Spring 2020
 
